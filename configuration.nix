@@ -87,14 +87,12 @@ in
     isNormalUser = true;
     description = "adam";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
     #  thunderbird
     ];
   };
-
-  # Set ZSH as default shell for all users
-  users.defaultUserShell = pkgs.zsh;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -118,6 +116,7 @@ in
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  programs.zsh.enable = true;
 
   # List services that you want to enable:
 
