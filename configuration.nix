@@ -93,6 +93,7 @@ in
     # nix search nixpkg <package>
     packages = with pkgs; [
       firefox
+      terminator
     ];
   };
 
@@ -109,6 +110,7 @@ in
      wget
      curl
      git
+     jetbrains-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -172,6 +174,7 @@ in
         golang.go
       ];
       userSettings = {
+        "workbench.colorTheme": "Default Light+";
         "files.autoSave" = "afterDelay";
         "editor.rulers" = [ 80 120 ];
         "extensions.ignoreRecommendations" = true;
