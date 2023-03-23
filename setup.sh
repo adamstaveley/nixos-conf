@@ -9,4 +9,4 @@ sudo mv configuration.nix /etc/nixos/configuration.nix
 # switch to new configuration
 sudo nixos-rebuild switch
 
-echo '\nNixOS updated. Start new shell session for Zsh'
+echo -e '\nNixOS updated. Start new shell session for Zsh'

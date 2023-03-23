@@ -93,7 +93,7 @@ in
     # nix search nixpkg <package>
     packages = with pkgs; [
       firefox
-      vscodium
+      vscode
     ];
   };
 
