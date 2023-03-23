@@ -88,9 +88,12 @@ in
     description = "adam";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
+    
+    # nix-env -qaP <package>
+    # nix search nixpkg <package>
     packages = with pkgs; [
       firefox
-    #  thunderbird
+      vscodium
     ];
   };
 
@@ -133,6 +136,7 @@ in
         ll = "ls -l";
         nixmod = "sudo vi /etc/nixos/configuration.nix";
         nixup = "sudo nixos-rebuild switch";
+        nix-shell = "nix-shell --run zsh";
       };
       zplug = {
         enable = true;
@@ -144,7 +148,11 @@ in
         ];
       };
       initExtra = ''
-        zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 
+        zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+        if [[ -n "$IN_NIX_SHELL" ]]; then
+          export PS1="$PS1(nix-shell) "
+        fi
       '';
     }; 
   };
