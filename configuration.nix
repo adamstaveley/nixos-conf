@@ -174,7 +174,7 @@ in
         golang.go
       ];
       userSettings = {
-        "workbench.colorTheme": "Default Light+";
+        "workbench.colorTheme" = "Default Light+";
         "files.autoSave" = "afterDelay";
         "editor.rulers" = [ 80 120 ];
         "extensions.ignoreRecommendations" = true;
