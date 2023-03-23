@@ -169,8 +169,7 @@ in
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         golang.go
-      ]
-
+      ];
     }; 
   };
 
