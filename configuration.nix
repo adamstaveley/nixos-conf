@@ -122,6 +122,8 @@ in
   # };
   programs.zsh.enable = true;
 
+  # note: need to set proton version <= 5.0
+  # https://github.com/NixOS/nixpkgs/issues/130699
   programs.steam.enable = true;
 
   # List services that you want to enable:
@@ -166,6 +168,15 @@ in
         fi
       '';
     };
+    programs.terminator = {
+      enable = true;
+      config = {
+        # .config/terminator/config
+        # https://nix-community.github.io/home-manager/options.html#opt-programs.terminator.config
+        profiles.default.background_color = "282828";
+        layouts.default.window0.size = "900, 600";
+      };
+    };
     programs.vscode = {
       enable = true;
       package = pkgs.vscode;
@@ -181,8 +192,11 @@ in
         "editor.rulers" = [ 80 120 ];
         "extensions.ignoreRecommendations" = true;
         "editor.minimap.enabled" = false;
-        "editor.fontFamily" = "'JetBrains Mono Regular', monspace";
+        # fails to find JetBrains Mono
+        "editor.fontFamily" = "'JetBrains Mono', monospace";
         "editor.fontSize" = 13;
+        "terminal.integrated.fontSize" = 13;
+        "terminal.integrated.defaultProfile.linux" = "zsh";
       };
     }; 
   };
