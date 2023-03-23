@@ -181,7 +181,7 @@ in
         "editor.rulers" = [ 80 120 ];
         "extensions.ignoreRecommendations" = true;
         "editor.minimap.enabled" = false;
-        "editor.fontFamily" = "'JetBrains Mono NL Regular', monspace";
+        "editor.fontFamily" = "'JetBrains Mono Regular', monspace";
         "editor.fontSize" = 13;
       };
     }; 
