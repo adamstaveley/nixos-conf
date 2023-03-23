@@ -171,6 +171,14 @@ in
         bbenoist.nix
         golang.go
       ];
+      userSettings = {
+        "files.autoSave" = "afterDelay";
+        "editor.rulers" = [ 80 120 ];
+        "extensions.ignoreRecommendations" = true;
+        "editor.minimap.enabled" = false;
+        "editor.fontFamily" = "'JetBrains Mono', monspace";
+        "editor.fontSize" = 13;
+      };
     }; 
   };
 
