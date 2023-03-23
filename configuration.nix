@@ -172,9 +172,11 @@ in
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         golang.go
+        github.github-vscode-theme
       ];
       userSettings = {
-        "workbench.colorTheme" = "Default Light+";
+        "workbench.colorTheme" = "GitHub Light";
+        "window.menuBarVisibility" = "hidden";
         "files.autoSave" = "afterDelay";
         "editor.rulers" = [ 80 120 ];
         "extensions.ignoreRecommendations" = true;
