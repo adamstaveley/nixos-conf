@@ -93,7 +93,6 @@ in
     # nix search nixpkg <package>
     packages = with pkgs; [
       firefox
-      vscode
     ];
   };
 
@@ -164,6 +163,14 @@ in
           export PS1="$PS1(nix-shell) "
         fi
       '';
+    };
+    programs.vscode = {
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+        bbenoist.nix
+        golang.go
+      ]
+
     }; 
   };
 
