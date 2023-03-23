@@ -121,6 +121,8 @@ in
   # };
   programs.zsh.enable = true;
 
+  programs.steam.enable = true;
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -129,6 +131,14 @@ in
   # Configure home manager
   home-manager.users.adam = {
     home.stateVersion = "22.11";
+    programs.git = {
+      enable = true;
+      userName = "";
+      userEmail = "";
+      aliases = {
+        st = "status";
+      };
+    };
     programs.zsh = {
       enable = true;
       shellAliases = {
