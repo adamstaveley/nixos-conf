@@ -167,7 +167,7 @@ in
       '';
     };
     programs.vscode = {
-      enable = true;
+      enable = false;
       package = pkgs.vscode;
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
@@ -181,7 +181,7 @@ in
         "editor.rulers" = [ 80 120 ];
         "extensions.ignoreRecommendations" = true;
         "editor.minimap.enabled" = false;
-        "editor.fontFamily" = "'JetBrains Mono', monspace";
+        "editor.fontFamily" = "'JetBrains Mono NL Regular', monspace";
         "editor.fontSize" = 13;
       };
     }; 
