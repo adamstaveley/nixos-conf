@@ -109,7 +109,12 @@ in
      wget
      curl
      git
-     jetbrains-mono
+  ];
+
+  # Fonts
+  # https://nixos.wiki/wiki/Fonts
+  fonts.fonts = with pkgs; [
+    jetbrains-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -170,9 +175,18 @@ in
     programs.terminator = {
       enable = true;
       config = {
-        # .config/terminator/config
         # https://nix-community.github.io/home-manager/options.html#opt-programs.terminator.config
-        profiles.default.background_color = "282828";
+        global_config.title_hide_sizetext = true;
+        profiles.default.background_color = "#282828";
+        profiles.default.cursor_color = "#aaaaaa";
+        profiles.default.font = "JetBrains Mono 10";
+        profiles.default.foreground_color = "#ebdbb2";
+        profiles.default.show_titlebar = false;
+        profiles.default.scrollbar_position = "hidden";
+        profiles.default.scroll_on_keystroke = true;
+        profiles.default.scrollback_lines = 2000;
+        profiles.default.pallet = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2";
+        profiles.default.use_system_font = false;
         layouts.default.window0.size = "900, 600";
       };
     };
