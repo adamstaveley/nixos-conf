@@ -188,7 +188,12 @@ in
         profiles.default.scrollback_lines = 2000;
         profiles.default.pallet = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2";
         profiles.default.use_system_font = false;
+        layouts.default.window0.type = "Window";
+        layouts.default.window0.parent = "";
         layouts.default.window0.size = "900, 600";
+        layouts.default.child1.type = "Terminal";
+        layouts.default.child1.type = "window0";
+        layouts.default.child1.profile = "default";
       };
     };
     programs.vscode = {
