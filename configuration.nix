@@ -192,7 +192,7 @@ in
         layouts.default.window0.parent = "";
         layouts.default.window0.size = "900, 600";
         layouts.default.child1.type = "Terminal";
-        layouts.default.child1.type = "window0";
+        layouts.default.child1.parent = "window0";
         layouts.default.child1.profile = "default";
       };
     };
