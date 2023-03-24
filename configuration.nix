@@ -174,6 +174,7 @@ in
     };
     programs.terminator = {
       enable = true;
+      package = pkgs.terminator;
       config = {
         # https://nix-community.github.io/home-manager/options.html#opt-programs.terminator.config
         global_config.title_hide_sizetext = true;
@@ -190,7 +191,7 @@ in
         profiles.default.use_system_font = false;
         layouts.default.window0.type = "Window";
         layouts.default.window0.parent = "";
-        layouts.default.window0.size = "900, 600";
+        #layouts.default.window0.size = "900, 600";
         layouts.default.child1.type = "Terminal";
         layouts.default.child1.parent = "window0";
         layouts.default.child1.profile = "default";
