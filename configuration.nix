@@ -17,6 +17,8 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.timeout = 120;
+  boot.loader.grub.configurationLimit = 5;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -187,7 +189,7 @@ in
         profiles.default.scroll_on_keystroke = true;
         profiles.default.scroll_on_output = true;
         profiles.default.scrollback_lines = 2000;
-        profiles.default.pallete = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2";
+        profiles.default.palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2";
         profiles.default.use_system_font = false;
         layouts.default.window0.type = "Window";
         layouts.default.window0.parent = "";
